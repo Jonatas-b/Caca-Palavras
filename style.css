@@ -1,8 +1,23 @@
-body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    padding: 20px;
-    background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+html, body {
+    height: 100%;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+html {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+}
+body {
+    min-height: 100vh;
+    background: transparent;
+}
+.dark-theme html {
+    background: linear-gradient(135deg, #18181b 0%, #232136 100%);
+}
+.dark-theme body {
+    background: transparent;
 }
 
 h1 {
@@ -157,4 +172,121 @@ h1 {
 .footer-link:hover {
     color: #4338ca;
     text-decoration: underline;
+}
+
+/* Tema escuro */
+.dark-theme {
+    background: linear-gradient(135deg, #18181b 0%, #232136 100%);
+    color: #f8fafc;
+}
+
+.dark-theme .controls {
+    background: #232136;
+    color: #f8fafc;
+}
+
+.dark-theme .status-bar {
+    background: #18181b;
+    color: #f8fafc;
+}
+
+.dark-theme .grid {
+    background: #232136;
+    box-shadow: 0 2px 12px #0004;
+}
+
+.dark-theme .cell {
+    background-color: #44475a;
+    border: 1px solid #6c63ff;
+    color: #f8fafc;
+}
+
+.dark-theme .cell.selected {
+    background-color: #7c3aed;
+    color: #fff;
+}
+
+.dark-theme .cell.found {
+    background-color: #34d399;
+    color: #fff;
+}
+
+.dark-theme .word-list {
+    background: #232136;
+    color: #f8fafc;
+}
+
+.dark-theme .word-list li {
+    color: #f8fafc;
+}
+
+.dark-theme .word-list li.found {
+    color: #34d399;
+}
+
+.dark-theme .original-text {
+    background: #18181b;
+    color: #f8fafc;
+}
+
+.dark-theme .footer {
+    background: #232136;
+    color: #a1a1aa;
+}
+
+.dark-theme .footer-link {
+    color: #6c63ff;
+}
+
+.dark-theme .footer-link:hover {
+    color: #34d399;
+}
+
+.dark-theme textarea#user-text {
+    background: #232136;
+    color: #f8fafc;
+    border: 1px solid #44475a;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dark-theme input#word-count {
+    background: #232136;
+    color: #f8fafc;
+    border: 1px solid #44475a;
+    transition: background 0.2s, color 0.2s;
+}
+
+.theme-toggle {
+    position: static; /* ou simplesmente remova a linha position */
+    margin-left: auto;
+    display: block;
+    margin-top: 24px;
+    margin-right: 32px;
+    z-index: 1001;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: #6366f1;
+    color: #fff;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px #0003;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.theme-toggle:hover {
+    background: #4338ca;
+    transform: scale(1.08);
+}
+.dark-theme .theme-toggle {
+    background: #232136;
+    color: #f8fafc;
+    border: 1px solid #6c63ff;
+}
+.dark-theme .theme-toggle:hover {
+    background: #6c63ff;
+    color: #fff;
 }

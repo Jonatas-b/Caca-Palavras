@@ -357,3 +357,17 @@ function showConfetti() {
     requestAnimationFrame(frame);
   })();
 }
+
+function updateThemeIcon() {
+    const btn = document.getElementById('toggle-theme');
+    if (document.body.classList.contains('dark-theme')) {
+        btn.innerHTML = '🌙'; // Lua para tema escuro
+    } else {
+        btn.innerHTML = '☀️'; // Sol para tema claro
+    }
+}
+document.getElementById('toggle-theme').addEventListener('click', function() {
+    document.body.classList.toggle('dark-theme');
+    updateThemeIcon();
+});
+updateThemeIcon();
