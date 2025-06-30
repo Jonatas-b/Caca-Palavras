@@ -371,3 +371,9 @@ document.getElementById('toggle-theme').addEventListener('click', function() {
     updateThemeIcon();
 });
 updateThemeIcon();
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    checkBtn.click();
+  }
+});
